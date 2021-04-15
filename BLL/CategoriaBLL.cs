@@ -25,7 +25,7 @@ namespace LojaVirtual.BLL
             con.ExecutarSql(sql);
         }
 
-        public void Alterar(CategoriaDTO categoria)
+        public void Alterar(CategoriaDTO categoria) 
         {
             string sql = string.Format($@"update categoria set nome = {categoria.Nome},  descricao = {categoria.Descricao};");
 

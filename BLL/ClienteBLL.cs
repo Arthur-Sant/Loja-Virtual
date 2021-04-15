@@ -40,13 +40,10 @@ namespace LojaVirtual.BLL
             return con.ExecutarConsulta(sql);
         }
 
-        public DataTable Pesquisar(string condicao)
+        public void ConsultarConta(string email, string senha)
         {
-            string sql = string.Format($@"select p.id, p.nome, p.descricao, p.valor, f.nome, c.nome, p.foto, p.quantidade 
-                                       from cliente as p, categoria as c, fornecedor as f where p.categoriaID = c.Id
-                                        and p.foncedorID = f.ID and {condicao} order by p.id;");
-
-            return con.ExecutarConsulta(sql);
+            string sql = string.Format($@"select * from cliente where email = {email} and senha = {senha};");
+            
         }
     }
 }
