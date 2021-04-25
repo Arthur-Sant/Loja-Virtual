@@ -68,8 +68,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="IMG\cancel.png" />
+    <Content Include="IMG\edit.png" />
     <Content Include="IMG\logo.jpg" />
+    <Content Include="IMG\trash.png" />
+    <Content Include="IMG\update.png" />
+    <Content Include="UI\formCadProduto.aspx" />
+    <Content Include="UI\formCadCliente.aspx" />
     <Content Include="UI\formLogin.aspx" />
+    <Content Include="UI\formMeuPerfil.aspx" />
+    <Content Include="UI\formTableProduto.aspx" />
     <Content Include="UI\index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -84,12 +92,40 @@
     <Compile Include="DTO\FornecedorDTO.cs" />
     <Compile Include="DTO\ProdutoDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\formCadProduto.aspx.cs">
+      <DependentUpon>formCadProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\formCadProduto.aspx.designer.cs">
+      <DependentUpon>formCadProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\formCadCliente.aspx.cs">
+      <DependentUpon>formCadCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\formCadCliente.aspx.designer.cs">
+      <DependentUpon>formCadCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\formLogin.aspx.cs">
       <DependentUpon>formLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\formLogin.aspx.designer.cs">
       <DependentUpon>formLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\formMeuPerfil.aspx.cs">
+      <DependentUpon>formMeuPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\formMeuPerfil.aspx.designer.cs">
+      <DependentUpon>formMeuPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\formTableProduto.aspx.cs">
+      <DependentUpon>formTableProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\formTableProduto.aspx.designer.cs">
+      <DependentUpon>formTableProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -108,7 +144,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IMG\Produtos\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

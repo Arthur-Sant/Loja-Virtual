@@ -40,10 +40,32 @@ namespace LojaVirtual.BLL
             return con.ExecutarConsulta(sql);
         }
 
-        public void ConsultarConta(string email, string senha)
+        public Boolean ConsultarConta(string email, string senha)
         {
-            string sql = string.Format($@"select * from cliente where email = {email} and senha = {senha};");
-            
+            string sql = string.Format($@"select * from cliente where email = '{email}' and senha = '{senha}';");
+            DataTable dt = con.ExecutarConsulta(sql);
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string RecuperarSenha(string email)
+        {
+            string sql = string.Format($@"select senha from cliente where email = '{email}';");
+            DataTable dt = con.ExecutarConsulta(sql);
+            if(dt.Rows.Count > 0)
+            {
+                return dt.Rows[0].ToString();
+            }
+            else
+            {
+                return "Usiário não esta cadastrado";
+            }
         }
     }
 }
